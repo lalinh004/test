@@ -8,6 +8,10 @@ html{
 #nav{
     height:42.8px;
     background-color: #fac8d7;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
 }
 #bar li{
     display:inline-block;
@@ -33,6 +37,7 @@ html{
     justify-content: space-between;
     align-items: center;
     padding-top: 20px;
+    margin-top: 42.8px;
 }
 #new-header-top-wrap .new-header-top-logo{
     float: left;
@@ -71,7 +76,10 @@ a{
     padding: 10px 40px;
     position: relative;
     cursor: pointer;
+    background-color: white;
+    font-size: 13px;
 }
+
 .menu > li >p{
     text-transform: uppercase;
     font-size: 13px;
@@ -80,6 +88,7 @@ a{
 .menu .menu1 .list1{
     display: none;
     position: absolute;
+    z-index: 1;
 }
 li.menu1:hover .list1{
     display: block;
@@ -87,7 +96,12 @@ li.menu1:hover .list1{
 .list1 > li {
     display: inline-block;
     width: 200px;
+    padding-left: 10px !important;
 }
+#header{
+    margin-bottom: 10px;
+}
+
 
 .menu4 .list2{
     height: 322px;
@@ -102,6 +116,45 @@ th,td{
 }
 
 #slider{
-    background-color: #fac8d7;
-    height: 1000px;
+    position: relative;
+}
+
+#slider .breadcrumb{
+    position: absolute;
+    top:100px;
+    left: 100px;
+}
+
+.breadcrumb .active li{
+    display: inline-block;
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+
+#new-container{
+    margin-left: 50px;
+}
+
+#new-container .new-collection-cates li{
+    display: inline-block;
+    margin: 20px;
+}
+
+.new-collection-cates ul li:not(.new-cates) .new-collection-cate-item-head {
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: 100px;
+    margin: 10px;
+    vertical-align: middle;
+    width:98px;
+    height: 98px;
+}
+
+.new-collection-cates ul li:not(.new-cates) .new-collection-cate-item-title {
+    display: block;
+    /* padding-top: 10px; */
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
 }
