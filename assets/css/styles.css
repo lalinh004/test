@@ -93,7 +93,7 @@ a{
 li.menu1:hover .list1{
     display: block;
 }
-.list1 > li {
+.menu1 > .list1 > li {
     display: inline-block;
     width: 200px;
     padding-left: 10px !important;
@@ -158,3 +158,47 @@ th,td{
     font-weight: 500;
     text-align: center;
 }
+
+ /* màu săc, chất liệu, giá */
+ #sticky-stack-wrapper {
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    /* width: 100%; */
+    height: 48px;
+    background: #fff;
+    padding-left: 50px;
+    padding-right: 90px;
+}
+
+#sticky-stack-wrapper li{
+    display: inline-block;
+}
+#new-collection-filter-list{
+    float: left;
+    font-size: 12px;
+}
+#new-collection-sort{
+    float: right;
+    line-height: 48px;
+    font-size: 14px;
+    font-weight:lighter;
+}
+
+#new-collection-filter-list ul li{
+    /* width: 60px; */
+    padding: 20px;
+}
+#new-collection-sort ul li{
+    padding: 0 10px;
+
+}
+
+/* Sản phẩm */
+.new-container new-container-fluid{
+    width: 4000px;
+}
+.new-header-top-actions-list .row1{
+    height: 451px;
+    display: flex;
+}
+
