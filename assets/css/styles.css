@@ -1,6 +1,7 @@
 *{
     padding:0;
     margin:0;
+    box-sizing: border-box;
 }
 html{
     font-family: Arial, Helvetica, sans-serif;
@@ -114,6 +115,26 @@ th,td{
     padding :6px;
     font-size: 13px;
 }
+/* Thêm bảng của collection */
+.new-header-menu-mega {
+    position: absolute;
+    display: none;
+    background: #fff;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.new-header-menu-mega .new-header-menu-mega-list .new-header-menu-mega-item {
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: calc(100% / 6);
+}
+
+new-header-menu-mega .new-header-menu-mega-list .new-header-menu-mega-item ul{
+    padding: 0;
+    list-style: none;
+}
 
 #slider{
     position: relative;
@@ -200,19 +221,41 @@ th,td{
 .new-collection-list .new-product-loop{
     width: 25%;
     font-size: 13px;
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
+}
+.new-product-loop >div:nth-child(1){
+    background: url('../img/1.jpg') top center / cover no-repeat;
+    /* background-image: url('//product.hstatic.net/200000103143/product/upload_b33724dca1674e7bafb28d71a439c1eb_large.jpg'); */
+
+    height: 382px;
 }
 .new-collection-list {
   display: flex;
   flex-wrap: wrap;
   float:left;
-  padding: 1px 10px;
+  padding: 0px 10px;
 }
 .new-collection-list .new-product-loop img{
     width: 99.5%;
-
 }
 .new-collection-list .new-product-loop .new-product-text{
     text-align: center;
-    height: 93px;
+    height: 70px;
+    background-color: #f5f5f5;
+    width: 99.5%;
+    top: 0;
+}
+
+.new-product-loop{
+    position: relative;
+}
+
+.new-product-loop .new-product-box{
+    position: absolute;
+    top: 2%;
+    right: 0;
+    background-color: #c5003e;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px;
 }
