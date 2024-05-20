@@ -42,7 +42,11 @@ html{
 }
 #new-header-top-wrap .new-header-top-logo{
     float: left;
-    padding-left: 78px;
+    padding-left: 33px;
+}
+.form-controljs-search-input{
+    color: #656363;
+    
 }
 
 #new-header-top-wrap .new-header-top-actions{
@@ -108,12 +112,14 @@ li.menu1:hover .list1{
     height: 322px;
     width: 1340px;
 }
-table{
-    display: none;
+.list2 li{
+    /* display: inline-block !important; */
 }
-th,td{
-    padding :6px;
-    font-size: 13px;
+.list2{
+    display: none !important;
+}
+.danh-muc-cha > .danh-sach-con {
+    display: block !important;
 }
 /* Thêm bảng của collection */
 .new-header-menu-mega {
@@ -138,6 +144,8 @@ new-header-menu-mega .new-header-menu-mega-list .new-header-menu-mega-item ul{
 
 #slider{
     position: relative;
+    background: url('../img/slider.png') top center / cover no-repeat;
+    height: 350px;
 }
 
 #slider .breadcrumb{
