@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 html{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 #nav{
     height:42.8px;
@@ -13,6 +13,7 @@ html{
     top:0;
     left: 0;
     right: 0;
+    z-index: 999;
 }
 #bar li{
     display:inline-block;
@@ -79,65 +80,123 @@ a{
 #new-header-menu .menu li{
     display: inline-block;
     padding: 10px 40px;
-    position: relative;
     cursor: pointer;
     background-color: white;
     font-size: 13px;
 }
-
+.menu .menu1{
+    position: relative;
+    
+}
+.menu1 .danh-muc-san-pham{
+    position: absolute;
+    z-index: 1;
+    margin-right: 80px;
+    margin-top: 20px;
+    background-color: #fff;
+    height: 250px;
+    width: 1320px;
+    padding: 0 15px;
+    display: none;
+}
 .menu > li >p{
     text-transform: uppercase;
     font-size: 13px;
 }
+.menu1 .danh-muc-san-pham li{
+    display: block !important;
+    padding: 5px 0 !important;
+    line-height: 1.6;
+    font-size: 15px !important;
+    font-weight: 100;
 
-.menu .menu1 .list1{
-    display: none;
-    position: absolute;
-    z-index: 1;
+
 }
-li.menu1:hover .list1{
+li.menu1:hover .danh-muc-san-pham{
     display: block;
 }
-.menu1 > .list1 > li {
-    display: inline-block;
-    width: 200px;
-    padding-left: 10px !important;
-}
+
 #header{
     margin-bottom: 10px;
 }
 
+.menu4 .danh-muc-san-pham{
+    position: absolute;
+    z-index: 1;
+    margin-right: 80px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    height: 250px;
+    margin-left: -690px;
+    display: none;
+}
+.menu4{
+    position: relative;
+}
 
-.menu4 .list2{
-    height: 322px;
-    width: 1340px;
+.danh-muc-san-pham .danh-muc-cha{
+    height: 250px;
+    background-color: #fff;
+    width: 189px;
+    padding: 0 15px;
+
 }
-.list2 li{
-    /* display: inline-block !important; */
-}
-.list2{
-    display: none !important;
-}
-.danh-muc-cha > .danh-sach-con {
+.danh-muc-con li{
     display: block !important;
+    padding: 5px 0 !important;
+    line-height: 1.4;
+    font-size: 13px;
 }
+.header-product{
+    font-weight:500;
+    font-size: 14px;
+}
+li.menu4:hover .danh-muc-san-pham{
+    display: flex;
+}
+
 /* Thêm bảng của collection */
+.menu5{
+    position: relative;
+}
 .new-header-menu-mega {
     position: absolute;
-    display: none;
     background: #fff;
-    top: 100%;
-    left: 0;
-    right: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    height: 250px;
+    margin-top: 20px;
+    margin-left: -893px; 
+    padding-right: 920px;
+    display: none;
 }
 
-.new-header-menu-mega .new-header-menu-mega-list .new-header-menu-mega-item {
-    padding-left: 15px;
-    padding-right: 15px;
-    min-width: calc(100% / 6);
+.new-header-menu-mega .new-header-menu-mega-item .new-header-menu-mega-sub {
+    height: 250px;
+    background-color: #fff;
+    width: 200px;
+    padding: 0 15px;
+    
+}
+.new-header-menu-mega-sub li{
+    display: block !important;
+    padding: 5px 0 !important;
+    line-height: 1.4;
+    font-size: 13px;
+}
+li.menu5:hover .new-header-menu-mega{
+    display: flex;
 }
 
-new-header-menu-mega .new-header-menu-mega-list .new-header-menu-mega-item ul{
+/* menu6 */
+.new-header-menu-mega-list li{
+    display: inline-block;
+}
+.new-header-menu-mega .new-header-menu-mega-list .new-header-menu-mega-item ul{
     padding: 0;
     list-style: none;
 }
@@ -227,30 +286,24 @@ new-header-menu-mega .new-header-menu-mega-list .new-header-menu-mega-item ul{
     width: 4000px;
 }
 .new-collection-list .new-product-loop{
-    width: 25%;
+    width: 375px;
     font-size: 13px;
     /* background-color: #f5f5f5; */
+    margin: 2px;
 }
-.new-product-loop >div:nth-child(1){
-    background: url('../img/1.jpg') top center / cover no-repeat;
-    /* background-image: url('//product.hstatic.net/200000103143/product/upload_b33724dca1674e7bafb28d71a439c1eb_large.jpg'); */
 
-    height: 382px;
-}
 .new-collection-list {
   display: flex;
   flex-wrap: wrap;
   float:left;
   padding: 0px 10px;
 }
-.new-collection-list .new-product-loop img{
-    width: 99.5%;
-}
+
 .new-collection-list .new-product-loop .new-product-text{
     text-align: center;
     height: 70px;
     background-color: #f5f5f5;
-    width: 99.5%;
+    /* width: 99.5%; */
     top: 0;
 }
 
