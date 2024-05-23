@@ -222,7 +222,9 @@ li.menu5:hover .new-header-menu-mega{
 #new-container{
     margin-left: 50px;
 }
-
+.new-container-fluid{
+    height: 960px;
+}
 #new-container .new-collection-cates li{
     display: inline-block;
     margin: 20px;
@@ -286,7 +288,7 @@ li.menu5:hover .new-header-menu-mega{
     width: 4000px;
 }
 .new-collection-list .new-product-loop{
-    width: 375px;
+    width: 24.5%;
     font-size: 13px;
     /* background-color: #f5f5f5; */
     margin: 2px;
@@ -319,4 +321,93 @@ li.menu5:hover .new-header-menu-mega{
     color: #fff;
     font-size: 12px;
     padding: 5px;
+}
+#content .add{
+    margin: auto;
+    height: 35px;
+    width: 200px;
+    border: 1px solid #000;
+    border-radius: 1%;
+    line-height: 35px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#footer{
+    height: 520px;
+    background-color: #f5f5f5;
+}
+#footer .new-footer-top{
+    height: 175px;
+    display: flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    padding-top: 60px;
+    padding-left: 30px;
+}
+ 
+.new-footer-top .new-footer-social li{
+    display: inline-block;
+    padding: 0 7px;
+    font-size: 18px;
+
+}
+
+.new-footer-top .new-footer-social,
+.new-footer-top .new-footer-newletter{
+    height: 175px;
+    width: 50%;
+}
+
+.new-footer-newletter input{
+    height: 46px;
+    width: 600px ;
+    padding: 7px 12px;
+}
+.new-footer-newletter{
+    line-height: 27px;
+}
+.new-footer-newletter h4{
+    font-size: 14px;
+    font-weight: 500;
+}
+.new-footer-newletter p{
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.new-footer-midle{
+    margin-top: 50px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 50px;
+}
+.new-footer-midle-item{
+    width: 20%;
+    line-height: 27px;
+}
+.new-footer-midle-item h5{
+    font-size: 14px;
+    font-weight: 400;
+}
+.new-footer-midle-item li{
+    list-style-type: none;
+    font-size: 12px;
+    
+}
+
+.new-footer-bottom{
+    /* margin-top: 50px; */
+    height: 90px;
+    padding: 0 50px;
+    line-height: 90px;
+}
+.new-footer-bottom .new-footer-bottom-left{
+    float: left;
+    font-size: 13px;
+}
+.new-footer-bottom .new-footer-bottom-right{
+    float: right;
 }
