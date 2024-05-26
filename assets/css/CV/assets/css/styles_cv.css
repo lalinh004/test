@@ -1,0 +1,132 @@
+#header{
+    width: 1000px;
+    margin: auto;
+    height: 150px;
+    background-color: #e9e7ea;
+}
+#body{
+    background-color: #D5D5D5;
+    font-family: system-ui;
+}
+
+.container{
+    background-color: #e9e7ea;
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    padding: 50px;
+    box-shadow: 0 10px 50px #858585;
+    display: grid;
+    grid-template-columns: 35% 60%;
+    column-gap: 5%;
+    row-gap: 30px;
+}
+
+.avatar img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.avatar{
+    display: flex;
+    justify-content: center;
+}
+.container .name{
+    padding-left: 30px;
+    border-left: 1px solid #000;
+    /* background-color: #fff; */
+}
+.name h1{
+    font-weight: 300;
+    font-size: xxx-large;
+    margin:  0 0 5px;
+}
+
+.name .specilize{
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.name .contact{
+    padding: 0;
+    list-style: none;
+}
+.name .contact span{
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: small;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.name .contact li{
+    padding: 5px 0;
+    transform: translate(-40px);
+    background-color: #e9e7ea;
+}
+.inf ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: right;
+    line-height: 25px;
+}
+.intro{
+    padding-left: 30px;
+    border-left: 1px solid #000;
+    text-align: justify;
+}
+h2{
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.exp{
+    text-align: right;
+}
+
+.exp h3{
+    margin: 25px 0;
+}
+
+.project{
+    padding-left: 30px;
+    border-left: 1px solid #000;
+    text-align: justify;
+}
+
+.skill {
+    /* margin: 20px 0; */
+    /* text-align: right; */
+}
+
+.skill h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.skill label {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+
+progress{
+    height: 8px;
+    width: 130px;
+    /* background-color: #3fc230; */
+}
+
+.sothich{
+    padding-left: 30px;
+    border-left: 1px solid #000;
+    text-align: justify;
+}
+
