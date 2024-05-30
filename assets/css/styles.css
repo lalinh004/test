@@ -723,11 +723,8 @@ li.price:hover .new-price{
     align-items: center;
     justify-content: center;
     border-radius: 0 0 4px 4px;
-}
-.btn{
-    padding: 6px 12px;
-    background-color: #fac8d7;
+     padding: 6px 12px;
     border: 0;
     font-size: 14px;
-    opacity: 0.6;
+    opacity: 1;
 }
