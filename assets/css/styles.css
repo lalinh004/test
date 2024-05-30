@@ -67,6 +67,9 @@ a{
     text-decoration: none;
     color: #000;
 }
+.icon i{
+    cursor: pointer;
+}
 #new-header-midle{
     height: 8px;
     background-color: #fac8d7;
@@ -78,7 +81,7 @@ a{
 
 #new-header-menu .menu li{
     display: inline-block;
-    padding: 10px 40px;
+    padding: 10px 40px 5px;
     cursor: pointer;
     background-color: white;
     font-size: 13px;
@@ -91,7 +94,7 @@ a{
     position: absolute;
     z-index: 1;
     margin-right: 80px;
-    margin-top: 20px;
+    margin-top: 5px;
     background-color: #fff;
     height: 250px;
     width: 1320px;
@@ -99,7 +102,7 @@ a{
     display: none;
     box-shadow: 0 0 5px rgba(0, 0 , 0, 0.3);
 }
-.menu > li >p{
+.menu p{
     text-transform: uppercase;
     font-size: 13px;
 }
@@ -113,7 +116,11 @@ a{
     
 }
 
-.new-header-menu .menu .menu1 > a::after {
+li.menu1:hover .danh-muc-san-pham{
+    display: block;
+}
+
+/* .new-header-menu .menu .menu1 > a::after {
     content: '';
     position: absolute;
     width: 10px; 
@@ -127,11 +134,42 @@ a{
   .new-header-menu .menu .menu1 > a:hover::after {
     width: 100%; 
     display: block; 
-  }
+} */
 
-#header{
-    margin-bottom: 10px;
+.menu .box{
+    height: 2px;
+    background-color: #fac8d7;
+    margin: 0 15px;
+    display: none;
 }
+.menu .not-mega-sub{
+    padding-bottom: 7px;
+}
+
+li.menu1:hover .box{
+    display: block;
+}
+
+li.menu2:hover .box{
+    display: block;
+}
+li.menu3:hover .box{
+    display: block;
+}
+li.menu4:hover .box{
+    display: block;
+}
+li.menu5:hover .box{
+    display: block;
+}
+li.menu6:hover .box{
+    display: block;
+}li.menu7:hover .box{
+    display: block;
+}
+/* #header{
+    margin-bottom: 5px;
+} */
 .menu3{
     position: relative;
 }
@@ -164,7 +202,7 @@ span.menu_label_sale {
     position: absolute;
     z-index: 1;
     margin-right: 80px;
-    margin-top: 20px;
+    margin-top: 5px;
     display: flex;
     flex-direction: row;
     flex-wrap:nowrap;
@@ -210,7 +248,7 @@ li.menu4:hover .danh-muc-san-pham{
     flex-direction: row;
     flex-wrap:nowrap;
     height: 250px;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-left: -893px; 
     padding-right: 920px;
     display: none;
@@ -295,6 +333,12 @@ li.menu5:hover .new-header-menu-mega{
 #sticky-stack-wrapper {
     background: #fff;
     padding: 0 50px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+#sticky-stack-wrapper .border-sticky{
+    height: 46px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 #new-collection-filter-list{
     float: left;
@@ -429,6 +473,33 @@ li.price:hover .new-price{
     font-size: 12px;
     padding: 5px;
 }
+
+.new-product-loop .caption{
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.08);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.new-product-loop .caption .caption-text{
+    font-weight: 500;
+    font-size: 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    position: absolute;
+    text-align: center;
+    padding: 7px 15px 5px;
+    bottom: 25%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    cursor: pointer;
+}
+.new-product-loop:hover .caption{
+    opacity: 1;
+}
 #content .add{
     margin: auto;
     height: 35px;
@@ -440,6 +511,11 @@ li.price:hover .new-price{
     text-align: center;
     font-size: 14px;
     margin-top: 50px;
+}
+
+#content .add:hover{
+    background-color: #000;
+    color: #fff;
 }
 
 /* Mã giảm giá */
