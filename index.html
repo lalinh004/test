@@ -15,12 +15,11 @@
     <div id="main">
         <div id="nav">
             <div id="bar">
-                <ul class="subnav">
-                    <li>
-                        <p>Xem ngay deal xin - tặng mẹ quà xinh</p>
-                    </li>
-                    <li><a id="button" href="">Xem ngay</a></li>
-                </ul>
+                <div style="display: flex;
+                align-items: center; padding-right: 40px;">
+                    <p> Xem ngay deal xin - tặng mẹ quà xinh</p>
+                </div>
+                <div><a id="button" href="">Xem ngay</a></div>
             </div>
         </div>
         <div id="header">
@@ -564,7 +563,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="coupon-item">
+                <div class="coupon-item c3">
                     <div class="coupon-item__left">
                         <div class="cp-img">
                             <span><img src="./assets/img/home_coupon_1_img.webp"></span>
@@ -672,6 +671,55 @@
         <div class="button-social-contact" style="left: 94.5%;right: -28px;">
             Liên hệ
         </div>
+        <div class="login">
+            <div class="new-login">
+                <div class="exit">
+                    <i class="ti-close"></i>
+                </div>
+                <div class="login-costom">
+                    <h1> Đăng nhập</h1>
+                </div>
+                <div class="box-login"></div>
+                <label for="custiom-email"></label>
+                <input type="email" id="custiom-email" placeholder="Email" class="text">
+                <label for="custiom-pass"></label>
+                <input type="password" id="custiom-pass" placeholder="Mật khẩu" class="text">
+                <div class="re-pass">
+                    <p><a href="#">Quên mật khẩu?</a> or <a href="#">Đăng ký</a></p>
+                </div>
+                <div class="dangnhap">
+                    <div> Đăng nhập</div>
+                </div>
+                <!-- <label for="dangnhap"></label> -->
+                <!-- <input type="submit" id="custom-dangnhap" placeholder="Đăng nhập" class="text"> -->
+                <div class="social-login">
+                    <div class="new-social-login">
+                        <div class="gmail">
+                            <div class="ti-google"></div>
+                            <div>Đăng nhập Google</div>
+                        </div>
+                        <div class="facebook">
+                            <div class="ti-facebook"></div>
+                            <div>Đăng nhập Facebook</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            const exitButton = document.querySelector('.exit');
+            const account = document.querySelector('.account');
+            const loginElement = document.querySelector('.login');
+
+            exitButton.addEventListener('click', () => {
+                loginElement.style.display = 'none';
+            });
+            account.addEventListener('click', () => {
+                loginElement.style.display = 'flex';
+            });
+
+        </script>
 </body>
 
 </html>
