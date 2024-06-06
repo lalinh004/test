@@ -117,21 +117,7 @@ li.menu1:hover .danh-muc-san-pham {
   display: block;
 }
 
-/* .new-header-menu .menu .menu1 > a::after {
-    content: '';
-    position: absolute;
-    width: 10px; 
-    border-top: 2px solid #fbcad4;
-    bottom: 8px;
-    left: 15px; 
-    display: none;
-  }
-  
-  
-  .new-header-menu .menu .menu1 > a:hover::after {
-    width: 100%; 
-    display: block; 
-} */
+
 
 .menu .box {
   height: 2px;
@@ -721,14 +707,24 @@ li.price:hover .new-price {
 
 .login{
     position: fixed;
-    background-color: rgba(14, 13, 13, 0.831);
     width: 100vw;
     height: 100vh;
     left: 0;
     top: 0;
-    z-index: 9999;
+    z-index: 1000;
     display: flex;
     justify-content: center;
+    display: none;
+  }
+  
+.login-bg{
+    background-color: rgba(14, 13, 13, 0.831);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 1001;
 }
 .new-login{
     height: 30vw;
@@ -739,6 +735,7 @@ li.price:hover .new-price {
     margin-top: 120px;
     border-radius: 5px;
     position: relative;
+    z-index: 1002;
 }
 .login-costom{
     height: 55px;

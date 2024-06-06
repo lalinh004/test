@@ -511,6 +511,7 @@
                             <div class="caption-text">Mua ngay</div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <div class="add">
@@ -672,6 +673,7 @@
             Liên hệ
         </div>
         <div class="login">
+            <div class="login-bg"></div>
             <div class="new-login">
                 <div class="exit">
                     <i class="ti-close"></i>
@@ -690,8 +692,6 @@
                 <div class="dangnhap">
                     <div> Đăng nhập</div>
                 </div>
-                <!-- <label for="dangnhap"></label> -->
-                <!-- <input type="submit" id="custom-dangnhap" placeholder="Đăng nhập" class="text"> -->
                 <div class="social-login">
                     <div class="new-social-login">
                         <div class="gmail">
@@ -711,6 +711,7 @@
             const exitButton = document.querySelector('.exit');
             const account = document.querySelector('.account');
             const loginElement = document.querySelector('.login');
+            const loginBackground = document.querySelector('.login-bg');
 
             exitButton.addEventListener('click', () => {
                 loginElement.style.display = 'none';
@@ -718,7 +719,9 @@
             account.addEventListener('click', () => {
                 loginElement.style.display = 'flex';
             });
-
+            loginBackground.addEventListener('click', () => {
+                loginElement.style.display = 'none';
+            });
         </script>
 </body>
 
