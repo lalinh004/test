@@ -672,9 +672,9 @@
         <div class="button-social-contact" style="left: 94.5%;right: -28px;">
             Liên hệ
         </div>
-        <div class="login">
+        <div class="login" id="loginForm">
             <div class="login-bg"></div>
-            <div class="new-login">
+            <form class="new-login">
                 <div class="exit">
                     <i class="ti-close"></i>
                 </div>
@@ -683,15 +683,22 @@
                 </div>
                 <div class="box-login"></div>
                 <label for="custiom-email"></label>
-                <input type="email" id="custiom-email" placeholder="Email" class="text">
+                <p id="hint-email" style="color: red; display: none; padding: 10px; padding-bottom: 0px;">Email không
+                    hợp lệ!</p>
+                <input type="email" id="custiom-email" placeholder="Email" class="text" required>
                 <label for="custiom-pass"></label>
-                <input type="password" id="custiom-pass" placeholder="Mật khẩu" class="text">
+                <p id="hint-pass" style="color: red; display: none; padding: 10px; padding-bottom: 0px;">Yêu cầu độ dài
+                    mật khẩu tối thiểu 8
+                    ký tự, bao gồm
+                    ít nhất một
+                    chữ hoa, một chữ thường, một số và một ký tự đặc biệt</p>
+                <input type="password" id="custiom-pass" placeholder="Mật khẩu" class="text" required>
                 <div class="re-pass">
                     <p><a href="#">Quên mật khẩu?</a> or <a href="#">Đăng ký</a></p>
                 </div>
-                <div class="dangnhap">
+                <button type="submit" class="dangnhap">
                     <div> Đăng nhập</div>
-                </div>
+                </button>
                 <div class="social-login">
                     <div class="new-social-login">
                         <div class="gmail">
@@ -705,8 +712,69 @@
                     </div>
                 </div>
 
-            </div>
+            </form>
         </div>
+
+        <script>
+            const loginForm = document.getElementById('loginForm');
+            const emailInput = document.getElementById('custiom-email');
+            const passwordInput = document.getElementById('custiom-pass');
+            const hint_pass = document.getElementById('hint-pass');
+            const hint_email = document.getElementById('hint-email');
+
+            loginForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Ngăn trình duyệt submit form mặc định
+
+                const email = emailInput.value.trim();
+                const password = passwordInput.value.trim();
+
+                var flag_focus = false
+                var check = true;
+                // Kiểm tra email
+                if (!validateEmail(email)) {
+
+                    hint_email.style.display = 'block';
+                    hint_email.style.fontSize = '0.75rem';
+                    emailInput.focus();
+                    flag_focus = true;
+                    check = false;
+                } else {
+                    hint_email.style.display = 'none';
+                    flag_focus = false;
+                }
+
+                // Kiểm tra mật khẩu
+                if (!validatePassword(password)) {
+                    hint_pass.style.display = 'block';
+                    hint_pass.style.fontSize = '0.75rem';
+                    check = false;
+                    if (flag_focus == false)
+                        passwordInput.focus();
+                } else {
+                    hint_pass.style.display = 'none';
+                }
+
+                // Xử lý đăng nhập (ví dụ: gửi dữ liệu đến server)
+                if (check) {
+                    alert('Đăng nhập thành công!');
+                    document.querySelector('.login').style.display = 'none';
+                }
+
+
+
+            });
+
+            function validateEmail(email) {
+                const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return regex.test(email);
+            }
+
+            function validatePassword(password) {
+                // Yêu cầu độ dài mật khẩu tối thiểu 8 ký tự, bao gồm ít nhất một chữ hoa, một chữ thường, một số và một ký tự đặc biệt
+                const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*\(\)\-_\[\]\{\}\'\"\<\>\/,\.\?\=]).{8,}$/;
+                return regex.test(password);
+            }
+        </script>
         <script>
             const exitButton = document.querySelector('.exit');
             const account = document.querySelector('.account');
