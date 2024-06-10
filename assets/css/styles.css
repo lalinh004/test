@@ -255,21 +255,38 @@ li.menu5:hover .new-header-menu-mega {
 
 #slider {
   position: relative;
-  background: url("../img/slider.png") top center / cover no-repeat;
+  /* background: url("../img/slider.png") top center / cover no-repeat; */
   height: 350px;
-}
+} 
 
 #slider .breadcrumb {
   position: absolute;
-  top: 100px;
-  left: 100px;
+}
+#slider .breadcrumb img{
+  height: 350px;
+  width: 100vw;
 }
 
+.breadcrumb .s-text{
+  position: relative;
+  top: -250px;
+  left: 50px;
+  max-width: 600px;
+}
+.breadcrumb .s-text h1{
+  padding-bottom: 10px;
+}
+.breadcrumb .s-text p{
+  font-size: 14px;
+}
+/*
 .breadcrumb .active li {
   display: inline-block;
   font-size: 13px;
   padding-bottom: 10px;
-}
+} */ 
+
+
 
 #new-container {
   margin-left: 50px;
@@ -476,7 +493,7 @@ li.price:hover .new-price {
   margin-bottom: 50px;
   text-align: center;
   font-size: 14px;
-  margin-top: 50px;
+  margin-top: 30px;
   cursor: pointer;
 }
 
@@ -694,7 +711,7 @@ li.price:hover .new-price {
   opacity: 1;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1350px) {
   .coupon-item.c3 {
     display: none;
   }

@@ -274,14 +274,86 @@
 
         <div id="slider">
             <div class="breadcrumb">
-                <div class="active">
-                    <ul>
-                        <li><a style="padding-right: 5px;">Trang chủ </a></li>
-                        <li>/</li>
-                        <li><a style="color: #777;padding-left: 5px;">Trang sức Pandora</a></li>
-                    </ul>
+                <img src="./assets/img/slider.png">
+                <div class="s-text">
+                    <div class="active" style="padding-bottom: 15px;">
+
+                        <a style="padding-right: 5px;">Trang chủ </a>/
+                        <a style="color: #777;padding-left: 5px;">Trang sức Pandora</a>
+
+                    </div>
+                    <h1>Trang sức Pandora</h1>
                 </div>
-                <h1>Trang sức Pandora</h1>
+            </div>
+            <div class="breadcrumb">
+                <img src="./assets/img/charm.webp">
+                <div class="s-text">
+                    <div class="active" style="padding-bottom: 15px;">
+
+                        <a style="padding-right: 5px;">Trang chủ </a>/
+                        <a style="color: #777;padding-left: 5px;">Charms</a>
+
+                    </div>
+                    <h1>Charms</h1>
+                    <p>Tùy chỉnh vòng đeo tay với những chiếc charms phản ánh phong cách của bạn. Từ những nhân vật nổi
+                        tiếng trong phim, hãy kết hợp các charms của Pandora để tạo nên những thiết kế cá nhân kể câu
+                        chuyện độc đáo của bạn.
+                    </p>
+                </div>
+            </div>
+            <div class="breadcrumb">
+                <img src="./assets/img/day_chuyen.webp">
+                <div class="s-text">
+                    <div class="active" style="padding-bottom: 15px;">
+                        <a style="padding-right: 5px;">Trang chủ </a>/
+                        <a style="color: #777;padding-left: 5px;">Dây chuyền</a>
+                    </div>
+                    <h1>Dây chuyền</h1>
+                    <p>Được chế tác từ bạc, mạ vàng 14k, mạ vàng hồng 14k độc đáo, dây chuyền Pandora là những phương
+                        tiện hoàn hảo để treo các mẫu mặt dây chuyền theo sở thích của bạn.</p>
+                </div>
+            </div>
+            <div class="breadcrumb">
+                <img src="./assets/img/hoatai.webp">
+                <div class="s-text">
+                    <div class="active" style="padding-bottom: 15px;">
+                        <a style="padding-right: 5px;">Trang chủ </a>/
+                        <a style="color: #777;padding-left: 5px;">Hoa tai</a>
+                    </div>
+                    <h1>Hoa tai</h1>
+                    <p>Hãy tự thưởng cho mình một cặp hoa tai mới làm từ bạc, mạ vàng 14k, mạ vàng hồng 14k. Từ những
+                        chiếc hoa tai nổi bật hàng ngày đến những mẫu hoa tai nổi bật thu hút ánh nhìn, hãy tìm đôi hoa
+                        tai trong bộ sưu tập. Kết hợp và phối hợp các kiểu dáng để tạo ra một bộ sưu tập độc đáo tôn
+                        vinh cá tính của bạn..</p>
+                </div>
+            </div>
+            <div class="breadcrumb">
+                <img src="./assets/img/nhan.webp">
+                <div class="s-text">
+                    <div class="active" style="padding-bottom: 15px;">
+                        <a style="padding-right: 5px;">Trang chủ </a>/
+                        <a style="color: #777;padding-left: 5px;">Nhẫn</a>
+                    </div>
+                    <h1>Nhẫn</h1>
+                    <p>Từ những chiếc nhẫn hình vương miện, trái tim và hoa được trang trí bằng các viên pha lê trong
+                        suốt đến những kiểu dáng đơn giản, bộ sưu tập nhẫn của Pandora có đủ mọi thứ. Tinh chỉnh phong
+                        cách của bạn với nhẫn làm từ bạc, mạ vàng 14k, mạ vàng hồng 14k.</p>
+                </div>
+            </div>
+            <div class="breadcrumb">
+                <img src="./assets/img/nhan.webp">
+                <div class="s-text">
+                    <div class="active" style="padding-bottom: 15px;">
+                        <a style="padding-right: 5px;">Trang chủ </a>/
+                        <a style="color: #777;padding-left: 5px;">Vòng</a>
+                    </div>
+                    <h1>Vòng</h1>
+                    <p>Những chiếc vòng tay đa năng của Pandora có thể phù hợp với phong cách của bạn. Hãy lựa chọn
+                        những chiếc vòng tay làm từ vàng 14k, mạ vàng hồng 14k, vàng mạ 14k và bạc - đeo chúng để có
+                        gương mặt tinh tế hoặc kết hợp với charms theo yêu thích để thể hiện câu chuyện độc nhất vô nhị
+                        của riêng bạn.
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -790,6 +862,23 @@
             loginBackground.addEventListener('click', () => {
                 loginElement.style.display = 'none';
             });
+        </script>
+
+        <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("breadcrumb");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) { myIndex = 1 }
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 5000);
+            }
         </script>
 </body>
 
